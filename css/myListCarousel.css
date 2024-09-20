@@ -97,3 +97,23 @@
     font-size: 0.9rem;
     color: #2ecc71;
   }
+
+  /* Adjust services section for mobile */
+@media (max-width: 768px) {
+  .hex-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller hexagons */
+  }
+
+  .hex {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+/* Adjust my list carousel for mobile */
+@media (max-width: 768px) {
+  .my-list-item {
+    width: 150px;
+    height: 200px; /* Smaller card sizes */
+  }
+}

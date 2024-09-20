@@ -31,7 +31,6 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    z-index: 2;
   }
   
   .carousel-overlay h1 {
@@ -48,7 +47,7 @@
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1em;
     border: none;
     text-decoration: none;
@@ -115,6 +114,28 @@
     .hero-button {
       font-size: 0.9em;
       padding: 0.8em 1.5em;
+    }
+  }
+  
+  /* Adjust carousel for mobile */
+@media (max-width: 768px) {
+    .hero-carousel-container {
+      height: 60vh; /* Reduce height for mobile */
+    }
+  
+    .carousel-overlay h1 {
+      font-size: 1.5em;
+      padding: 0 1em; /* Add padding for better readability */
+    }
+  
+    .hero-button {
+      font-size: 0.8em;
+      padding: 0.5em 1em;
+    }
+  
+    .hero-carousel-prev, .hero-carousel-next {
+      font-size: 1.2rem;
+      padding: 5px;
     }
   }
   
