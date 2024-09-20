@@ -1,0 +1,99 @@
+/* Card layout for My List */
+  .my-list-carousel {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 30px;
+    padding-top: 80px;
+    position: relative;
+    -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
+    scrollbar-width: none;
+  }
+  
+  .my-list-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Chrome, Safari, and Opera */
+  }
+  
+  .my-list-carousel__container {
+    white-space: nowrap;
+    margin: 70px 0;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .my-list__title {
+    color: #9e5952;
+    font-size: 2.5rem;
+    position: relative;
+    padding-left: 30px;
+    text-align: center;
+  }
+  
+  .my-list-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #95bcd6;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 70px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 1000ms all;
+    transform-origin: center left;
+    position: relative;
+  }
+  
+  .my-list-item:hover ~ .my-list-item {
+    transform: translate3d(100px, 0, 0);
+  }
+  
+  .my-list-carousel__container:hover .my-list-item {
+    opacity: 0.3;
+  }
+  
+  .my-list-carousel__container:hover .my-list-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  .my-list-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .my-list-item__details {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .my-list-item__details:hover {
+    opacity: 1;
+  }
+  
+  .my-list-item__details .controls {
+    padding-top: 180px;
+  }
+  
+  .my-list-item__details .my-list-item__details--title,
+  .my-list-item__details--subtitle {
+    color: #fff;
+    margin: 5px 0;
+  }
+  
+  .my-list-item__details span {
+    font-size: 0.9rem;
+    color: #2ecc71;
+  }

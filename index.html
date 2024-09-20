@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Silver Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/myListCarousel.css" />
+    <link rel="stylesheet" href="css/hexagon.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-search">
+        <!-- Silver Hub text -->
+        <span id="site-name" class="site-name">
+          <span>S</span>
+          <span>i</span>
+          <span>l</span>
+          <span>v</span>
+          <span>e</span>
+          <span>r</span>
+          <span> </span>
+          <span>H</span>
+          <span>u</span>
+          <span>b</span>
+        </span>
+
+        <!-- Search bar form -->
+        <form
+          action="https://www.google.com/search"
+          class="search"
+          id="search-bar"
+        >
+          <input
+            type="search"
+            placeholder="Type something..."
+            name="q"
+            class="search__input"
+          />
+          <div class="search__button" id="search-button">
+            <i class="ri-search-2-line search__icon"></i>
+            <i class="ri-close-line search__close"></i>
+          </div>
+        </form>
+
+        <nav class="top-nav">
+          <a href="#">CONTACT US</a>
+        </nav>
+      </div>
+
+      <nav class="bottom-nav">
+        <a href="#">JEWELLERY</a>
+        <a href="#">STONE</a>
+        <a href="#">DIAMOND</a>
+        <a href="#">EARRINGS</a>
+        <a href="#">RINGS</a>
+        <a href="#">MORE</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section (Carousel) -->
+    <section class="hero-carousel-container">
+      <div class="hero-carousel">
+        <div class="hero-carousel-slide">
+          <img src="images/img1.webp" alt="Slide 1" />
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="images/img2.webp" alt="Slide 2" />
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="images/img3.webp" alt="Slide 3" />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="carousel-overlay">
+        <h1>Jewelry that impresses.</h1>
+        <a href="#" class="hero-button">Contact us</a>
+      </div>
+      <button class="hero-carousel-prev">‹</button>
+      <button class="hero-carousel-next">›</button>
+      <div class="hero-carousel-indicators">
+        <span class="dot" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+      </div>
+    </section>
+    
+    <div class="services-section">
+      <h2>Catagories</h2>
+      <div class="hex-grid">
+        <div class="hex">
+          <div class="hex-content">
+            <img src="./images/myimg1.webp" alt="Asesoría de Imagen Personal" />
+            <h3>Asesoría de Imagen Personal</h3>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+
+        <div class="hex">
+          <div class="hex-content">
+            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
+            <h3>Editorial de Moda</h3>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+
+        <div class="hex">
+          <div class="hex-content">
+            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
+            <h3>Editorial de Moda</h3>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+
+        <div class="hex">
+          <div class="hex-content">
+            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
+            <h3>Editorial de Moda</h3>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+
+        <div class="hex">
+          <div class="hex-content">
+            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
+            <h3>Editorial de Moda</h3>
+            <a href="#">Ver más</a>
+          </div>
+        </div>
+        <!-- Repeat this block for all hexagons -->
+      </div>
+    </div>
+
+    <section class="my-list-carousel">
+      <h2 class="my-list__title">Collection</h2>
+      <div class="my-list-carousel__container">
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg1.webp"
+            alt="card1"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg2.webp"
+            alt="card2"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg3.webp"
+            alt="card3"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg4.webp"
+            alt="card4"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg5.webp"
+            alt="card5"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg6.webp"
+            alt="card6"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="my-list-item">
+          <img
+            class="my-list-item__img"
+            src="images/myimg7.webp"
+            alt="card6"
+            loading="lazy"
+          />
+          <div class="my-list-item__details">
+            <div class="controls">
+              <span class="fas fa-play-circle"></span>
+              <span class="fas fa-plus-circle"></span>
+            </div>
+            <h5 class="my-list-item__details--title">Descriptive Title</h5>
+            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <div class="contact-container">
+        <div class="contact-left">
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5226172020157!2d72.49979767515316!3d23.04129397916067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bc015f5901f%3A0x72b1d84958a31f4f!2sSilver%20hub%2Fkrunal%20gems%20and%20jewellery!5e0!3m2!1sen!2sca!4v1726699950574!5m2!1sen!2sca"
+              width="100%"
+              height="400px"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form id="contact-form" action="" method="post">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name..."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email..."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject..."
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <div class="contact-item">
+          <img src="icons/location.svg" alt="Location Icon" />
+          <h6>Gf-09, Shilp satved , Ahmedabad <br /><span>Location</span></h6>
+        </div>
+        <div class="contact-item">
+          <img src="icons/phone.svg" alt="Phone Icon" />
+          <h6>010-020-0340<br /><span>Phone Number</span></h6>
+        </div>
+        <div class="contact-item">
+          <img src="icons/mail.svg" alt="Email Icon" />
+          <h6>info@villa.co<br /><span>Business Email</span></h6>
+        </div>
+        <div class="contact-item">
+          <img src="icons/insta.svg" alt="Location Icon" />
+          <h6>silverhub_krunalgems<br /><span>Instagram</span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="parent-line">
+      <div class="line"></div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Up comming events</a></li>
+          <!-- <li><a href="#">International Shipping</a></li> -->
+          <!-- <li><a href="#">Payment Options</a></li> -->
+          <!-- <li><a href="#">Track your Order</a></li> -->
+          <!-- <li><a href="#">Returns</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Information</h4>
+        <ul>
+          <!-- <li><a href="#">Blog</a></li> -->
+          <!-- <li><a href="#">Offers & Contest Details</a></li> -->
+          <li><a href="#">Help & FAQs</a></li>
+          <li><a href="#">About SilverHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="mailto:email@example.com">Email Us</a></li>
+          <li><a href="tel:1800-266-0123">1800-266-0123</a></li>
+          <li><a href="#">Chat with Us</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div>
+      <div class="copyr">
+        <div class="col-lg-8">
+          <p>Copyright © 2048 SilverHub., Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
