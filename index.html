@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <title>Silver Hub</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/myListCarousel.css" />
-    <link rel="stylesheet" href="css/hexagon.css" />
-    <link rel="stylesheet" href="css/hero.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Jewellery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="main-header">
-      <div class="logo-search">
-        <!-- Silver Hub text -->
-        <span id="site-name" class="site-name">
-          <span>S</span>
-          <span>i</span>
-          <span>l</span>
-          <span>v</span>
-          <span>e</span>
-          <span>r</span>
-          <span> </span>
-          <span>H</span>
-          <span>u</span>
-          <span>b</span>
-        </span>
+    <!-- Header Section -->
+    <header>
+      <div class="header-top">
+        <div class="contact-info">
+          <img src="icons/chat.svg" alt="chat Logo" />
+          <img src="icons/phone.svg" alt="call Logo" />
+          <img src="icons/mail.svg" alt="mail Logo" />
+          <img src="icons/location.svg" alt="location Logo" />
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Silver Hub Logo" />
+        </div>
 
         <!-- Search bar form -->
         <form
@@ -48,212 +43,112 @@
             <i class="ri-close-line search__close"></i>
           </div>
         </form>
-
-        <nav class="top-nav">
-          <a href="#">CONTACT US</a>
-        </nav>
       </div>
-
-      <nav class="bottom-nav">
-        <a href="#">JEWELLERY</a>
-        <a href="#">STONE</a>
-        <a href="#">DIAMOND</a>
-        <a href="#">EARRINGS</a>
-        <a href="#">RINGS</a>
-        <a href="#">MORE</a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">SHOP FOR JEWELLERY</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">WHY US</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- Hero Section (Carousel) -->
-    <section class="hero-carousel-container">
-      <div class="hero-carousel">
-        <div class="hero-carousel-slide">
-          <img src="images/img1.webp" alt="Slide 1" />
+    <!-- Banner Section -->
+    <section class="banner">
+      <img src="images/img1.webp" alt="Jewellery Banner" />
+    </section>
+
+    <!-- Shop For Jewellery Section -->
+    <section class="shop-section">
+      <h2>... Shop For Jewellery ...</h2>
+      <div class="shop-categories">
+        <div class="products">
+          <div class="product">
+            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+            <div class="category">Gold Jewellery</div>
+            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+            <div class="category">Silver Jewellery</div>
+            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+            <div class="category">Diamond Jewellery</div>
+            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+            <div class="category">Platinum Jewellery</div>
+          </div>
         </div>
-        <div class="hero-carousel-slide">
-          <img src="images/img2.webp" alt="Slide 2" />
-        </div>
-        <div class="hero-carousel-slide">
-          <img src="images/img3.webp" alt="Slide 3" />
-        </div>
-        <!-- Add more slides as needed -->
-      </div>
-      <div class="carousel-overlay">
-        <h1>Jewelry that impresses.</h1>
-        <a href="#" class="hero-button">Contact us</a>
-      </div>
-      <button class="hero-carousel-prev">‹</button>
-      <button class="hero-carousel-next">›</button>
-      <div class="hero-carousel-indicators">
-        <span class="dot" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
       </div>
     </section>
-    
-    <div class="services-section">
-      <h2>Catagories</h2>
-      <div class="hex-grid">
-        <div class="hex">
-          <div class="hex-content">
-            <img src="./images/myimg1.webp" alt="Asesoría de Imagen Personal" />
-            <h3>Asesoría de Imagen Personal</h3>
-            <a href="#">Ver más</a>
-          </div>
-        </div>
 
-        <div class="hex">
-          <div class="hex-content">
-            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
-            <h3>Editorial de Moda</h3>
-            <a href="#">Ver más</a>
-          </div>
+    <!-- Products Section -->
+    <section class="products-section">
+      <h2>... Products ...</h2>
+      <div class="products">
+        <div class="product">
+          <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+          <p>Gold Chain Necklace</p>
+          <p>₹83,000</p>
         </div>
-
-        <div class="hex">
-          <div class="hex-content">
-            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
-            <h3>Editorial de Moda</h3>
-            <a href="#">Ver más</a>
-          </div>
+        <div class="product">
+          <img src="images/myimg1.webp" alt="Ruby Earring" />
+          <p>Ruby Earring</p>
+          <p>₹25,700</p>
         </div>
-
-        <div class="hex">
-          <div class="hex-content">
-            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
-            <h3>Editorial de Moda</h3>
-            <a href="#">Ver más</a>
-          </div>
+        <div class="product">
+          <img src="images/myimg1.webp" alt="Chain" />
+          <p>Chain</p>
+          <p>₹36,700</p>
         </div>
-
-        <div class="hex">
-          <div class="hex-content">
-            <img src="./images/myimg1.webp" alt="Editorial de Moda" />
-            <h3>Editorial de Moda</h3>
-            <a href="#">Ver más</a>
-          </div>
+        <div class="product">
+          <img src="images/myimg1.webp" alt="Gold Bangle" />
+          <p>Gold Bangle</p>
+          <p>₹56,000</p>
         </div>
-        <!-- Repeat this block for all hexagons -->
       </div>
-    </div>
+    </section>
 
-    <section class="my-list-carousel">
-      <h2 class="my-list__title">Collection</h2>
-      <div class="my-list-carousel__container">
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg1.webp"
-            alt="card1"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg2.webp"
-            alt="card2"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg3.webp"
-            alt="card3"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg4.webp"
-            alt="card4"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg5.webp"
-            alt="card5"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg6.webp"
-            alt="card6"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <div class="my-list-item">
-          <img
-            class="my-list-item__img"
-            src="images/myimg7.webp"
-            alt="card6"
-            loading="lazy"
-          />
-          <div class="my-list-item__details">
-            <div class="controls">
-              <span class="fas fa-play-circle"></span>
-              <span class="fas fa-plus-circle"></span>
-            </div>
-            <h5 class="my-list-item__details--title">Descriptive Title</h5>
-            <h6 class="my-list-item__details--subtitle">Date and Duration</h6>
-          </div>
-        </div>
-        <!-- Add more cards as needed -->
+    <!-- About Us Section -->
+    <section class="about-us-section">
+      <h2>... About Us ...</h2>
+      <div class="about">
+        <img src="images/myimg53.jpg" alt="Gold Bangle" />
       </div>
+      <p>
+        We, Star Jewellery, situated at Malad West, Mumbai, Maharashtra, are one
+        of the leading exclusively designed jewellery showrooms...
+      </p>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us-section">
+      <h2>... Why Us ...</h2>
+      <div class="why-us-icons">
+        <div class="icon">Great Collection</div>
+        <div class="icon">Reliable Products</div>
+        <div class="icon">100% Genuine</div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <h2>... Gallery ...</h2>
+      <div class="gallery">
+        <img src="images/img1.webp" alt="Gallery 1" />
+        <img src="images/img1.webp" alt="Gallery 2" />
+        <img src="images/img1.webp" alt="Gallery 3" />
+        <img src="images/img1.webp" alt="Gallery 4" />
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <h2>... Testimonials ...</h2>
+      <p>
+        Did my wedding jewellery shopping here. Great quality and the price was
+        also reasonable.
+      </p>
+      <p>- Madhavi Shukla</p>
     </section>
 
     <!-- Contact Section -->
@@ -338,47 +233,16 @@
         </div>
       </div>
     </div>
-    <div class="parent-line">
-      <div class="line"></div>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-section">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><a href="#">Up comming events</a></li>
-          <!-- <li><a href="#">International Shipping</a></li> -->
-          <!-- <li><a href="#">Payment Options</a></li> -->
-          <!-- <li><a href="#">Track your Order</a></li> -->
-          <!-- <li><a href="#">Returns</a></li> -->
-        </ul>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-left">
+        <p>SilverHub, Ahmedabad, Gujarat</p>
       </div>
-      <div class="footer-section">
-        <h4>Information</h4>
-        <ul>
-          <!-- <li><a href="#">Blog</a></li> -->
-          <!-- <li><a href="#">Offers & Contest Details</a></li> -->
-          <li><a href="#">Help & FAQs</a></li>
-          <li><a href="#">About SilverHub</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Us</h4>
-        <ul>
-          <li><a href="mailto:email@example.com">Email Us</a></li>
-          <li><a href="tel:1800-266-0123">1800-266-0123</a></li>
-          <li><a href="#">Chat with Us</a></li>
-        </ul>
+      <div class="footer-right">
+        <p>© 2024 SilverHub. All rights reserved.</p>
       </div>
     </footer>
-    <div>
-      <div class="copyr">
-        <div class="col-lg-8">
-          <p>Copyright © 2048 SilverHub., Ltd. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-    <script src="js/scrolling.js" defer></script>
     <script src="js/script.js" defer></script>
   </body>
 </html>

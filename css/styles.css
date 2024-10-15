@@ -7,12 +7,6 @@
   font-style: normal; /* Optional: define the style */
 }
 
-html {
-  scroll-behavior: auto; /* Disable native smooth scroll behavior */
-  overflow-y: scroll; /* Ensure vertical scrolling is enabled */
-}
-
-/* Apply font globally to all elements */
 * {
   font-family: 'CustomFont', Arial, sans-serif;
   margin: 0;
@@ -20,33 +14,45 @@ html {
   box-sizing: border-box;
 }
 
-/* General Styles */
 body {
-  margin: 0em;
-  overflow-y: hidden;
+  line-height: 1.6;
 }
 
-/* Show scrollbar when scrolling */
-body:focus-within {
-  overflow-y: auto;
+header {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.main-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10; /* Ensure it's on top */
-  background-color: rgba(255, 255, 255, 0); /* Transparent background */
-  transition: background-color 0.3s ease;
-}
-
-.logo-search {
-  position: relative;
+.header-top {
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1em;
-  margin-bottom: 0.5em;
+  color: #261f29;
+  background-color: #ffe678;
+}
+
+.contact-info{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.contact-info img{
+  width: 1.5rem;
+  background-color: None;
+}
+
+.contact-info img:hover{
+  transform: scale(1.1);
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 6rem;
 }
 
 /* Search styles */
@@ -79,8 +85,8 @@ body:focus-within {
 .search__button {
   width: 56px;
   height: 56px;
-  color: #fff;
-  background-color: var(--white-color);
+  color: #000;
+  background-color: var(--black-color);
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -97,7 +103,7 @@ body:focus-within {
   transform: rotate(-40deg) scale(2);
 }
 .search__icon, .search__close {
-  color: var(--white-color);
+  color: #000;
   font-size: 1.5rem;
   position: absolute;
   transition: opacity 0.5s ease;
@@ -128,69 +134,78 @@ body:focus-within {
   opacity: 1;
 }
 
-/* Site Name Styles */
-.site-name {
-  font-family: 'CustomFont', sans-serif;
-  font-size: 2.3em;
-  color: #fff;
+.navbar {
+  background-color: #FFF;
+  color: #e8edf8;
+  padding: 10px 200px;
+}
+
+.navbar ul {
+  list-style: none;
   display: flex;
-  gap: 0.2em;
-  transition: opacity 0.5s ease, visibility 0.5s, transform 0.5s ease;
+  justify-content: space-between;
+  background-color: #FFF;
 }
 
-.site-name span {
-  display: inline-block;
-  opacity: 1;
-  transform-origin: center center;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+.navbar ul li {
+  display: inline;
 }
 
-
-/* Navigation Styles */
-.top-nav, .bottom-nav {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 10px 0;
-  font-size: 1em;
-}
-
-.top-nav a, .bottom-nav a {
+.navbar ul li a {
   text-decoration: none;
+  background-color: #FFF;
+  color: #000;
+  padding: 0.6em;
+  transition: all 0.15s;
+}
+
+.navbar ul li a:hover {
+  background-color: #e8edf8;
+  color: #5e6684;
+  border-radius: 20px;
+}
+
+
+.banner {
   position: relative;
-  display: inline-block;
-  /* color: #9e5952; */
-  color: #ffffff;
-  font-weight: bold;
-  padding: 10px;
-  transition: transform 0.5s ease;
+  text-align: center;
 }
 
-.top-nav a::after, .bottom-nav a::after {
-  /* background-color: rgba(255, 255, 255, 0); Transparent background */
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color:#fff;
-  /* background-color: #9e5952; */
-  transition: width 0.5s ease, left 0.5s ease;
-}
-
-/* Color changes to black when scrolled */
-.scrolled .top-nav a::after, 
-.scrolled .bottom-nav a::after {
-  background-color: #000; /* Black underline when scrolled */
-}
-
-.top-nav a:hover, .bottom-nav a:hover {
-  transform: scale(1.1);
-}
-
-.top-nav a:hover::after, .bottom-nav a:hover::after {
+.banner img {
   width: 100%;
-  left: 0;
+}
+
+.shop-section, .products-section, .about-us-section, .why-us-section, .gallery-section, .testimonials-section, .contact-us-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.shop-categories, .products, .why-us-icons, .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Product Image Styling */
+.products img {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the area */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.category, .product, .icon, .gallery img {
+  flex: 1;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
 }
 
 /* Contact section styles */
@@ -208,6 +223,13 @@ body:focus-within {
 
 .contact-left, .contact-right {
   width: 48%;
+}
+
+.about img{
+  width: 20em; /* Set the desired width */
+  height: 23em; /* Set the desired height */
+  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the area */
+  border-radius: 8px;
 }
 
 /* Map */
@@ -292,10 +314,11 @@ body:focus-within {
   width: 40px;
 }
 
+/* 
 .contact-item h6 {
-  font-size: 18px;
+  font-size: 1rem;
   color: #333;
-}
+} */
 
 .contact-item h6 span {
   display: block;
@@ -303,187 +326,10 @@ body:focus-within {
   font-size: 14px;
 }
 
-
-.parent-line {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  background-color: #f9ecea;
-}
-
-.line{
-  border-top: 0.2em solid #9e5952;
-  background-color: #fff;
-  width: 80%;
-  border-radius: 1em;
-}
-/* Footer General Styles */
-.footer {
+footer {
+  background-color: #FFF;
+  color: #fff;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 80px;
-  background-color: #f9ecea;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
-.footer-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-section h4 {
-  font-size: 16px;
-  color: #9e5952;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  color: #666;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Copywrite */
-
-.copyr {
-  background-color: #f9ecea;
-}
-
-.copyr p {
-  text-align: center;
-  line-height: 100px;
-  color: #9e5952;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.copyr p a:hover {
-  opacity: 0.75;
-}
-
-/* Adjust header for mobile */
-@media (max-width: 768px) {
-  .main-header {
-    padding: 1em 0;
-  }
-
-  .logo-search {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .site-name {
-    font-size: 1.8em; /* Reduce site name size */
-  }
-
-  .top-nav, .bottom-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    padding: 0.5em 0;
-  }
-
-  .top-nav a, .bottom-nav a {
-    font-size: 0.9em;
-  }
-}
-
-/* Adjust search button for mobile */
-@media (max-width: 768px) {
-  .search {
-    width: 3em;
-    height: 3em;
-  }
-
-  .search__input {
-    font-size: 0.8em;
-  }
-
-  .search__button {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Adjust footer for mobile */
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    padding: 20px 40px;
-    text-align: center;
-  }
-
-  .footer-section {
-    margin-bottom: 1em;
-  }
-
-  .footer-section ul {
-    padding: 0;
-  }
-
-  .footer-section ul li a {
-    font-size: 0.9em;
-  }
-}
-
-/* Adjust general font sizes and spacing */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* Adjust base font size */
-  }
-
-  .submit-button {
-    font-size: 0.9em;
-    padding: 10px;
-  }
-
-  .contact-section {
-    padding: 30px 0; /* Reduce padding */
-  }
-}
-
-
-@media (max-width: 992px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .contact-left, .contact-right {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .footer {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-section {
-    margin-bottom: 20px;
-  }
-
-}
-
-@media (max-width: 600px) {    /* Hide carousel buttons on smaller screens */
-  .carousel-prev, .carousel-next {
-    font-size: 1.5rem;
-    padding: 5px;
-  }
 }
