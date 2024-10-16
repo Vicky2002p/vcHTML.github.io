@@ -1,10 +1,10 @@
 /* Font */
 @font-face {
   font-family: 'CustomFont'; /* Your custom font name */
-  src:url('../fonts/fonts/Zodiak-Variable.woff2') format('woff2'),
-      url('../fonts/fonts/Zodiak-Variable.woff') format('woff');
-  font-weight: normal; /* Optional: define the weight */
-  font-style: normal; /* Optional: define the style */
+  src: url('../fonts/fonts/Zodiak-Variable.woff2') format('woff2'),
+       url('../fonts/fonts/Zodiak-Variable.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -31,17 +31,18 @@ header {
   background-color: #ffe678;
 }
 
-.contact-info{
+.contact-info {
   display: flex;
   justify-content: space-between;
   width: 50%;
 }
-.contact-info img{
+
+.contact-info img {
   width: 1.5rem;
-  background-color: None;
+  background-color: none;
 }
 
-.contact-info img:hover{
+.contact-info img:hover {
   transform: scale(1.1);
 }
 
@@ -61,7 +62,6 @@ header {
   width: 5em;
   height: 5em;
   background-color: var(--white-color);
-  /* box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1); */
   border-radius: 4rem;
   overflow: hidden;
   transition: width 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
@@ -99,9 +99,10 @@ header {
   transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
 }
 
-.search__button:hover{
+.search__button:hover {
   transform: rotate(-40deg) scale(2);
 }
+
 .search__icon, .search__close {
   color: #000;
   font-size: 1.5rem;
@@ -165,7 +166,6 @@ header {
   border-radius: 20px;
 }
 
-
 .banner {
   position: relative;
   text-align: center;
@@ -175,7 +175,7 @@ header {
   width: 100%;
 }
 
-.shop-section, .products-section, .about-us-section, .why-us-section, .gallery-section, .testimonials-section, .contact-us-section {
+.shop-section, .products-section, .about-us-section, .why-us-section, .gallery-section, .testimonials-section, .contact-section, .contact-form-section, .map-section {
   padding: 40px;
   text-align: center;
 }
@@ -188,10 +188,10 @@ header {
 
 /* Product Image Styling */
 .products img {
-  width: 150px; /* Set the desired width */
-  height: 150px; /* Set the desired height */
-  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the area */
-  border-radius: 8px; /* Optional: adds rounded corners */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .category, .product, .icon, .gallery img {
@@ -208,36 +208,60 @@ header {
   transform: scale(1.1);
 }
 
-/* Contact section styles */
-.contact-section {
+/* Map Section */
+.map-section {
   padding: 50px 0;
-  background-color: #f9ecea;
+  background-color: #f2f4f6;
+}
+
+/* Position map on the left and the contact form on the right */
+.map-section iframe {
+  width: 100%; /* Ensures the map takes up the full width of its container */
+  height: 24rem; /* Adjust height as needed */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Styles */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  /* background-color: #f9ecea; */
   color: #9e5952;
 }
 
+.contact-form-section {
+  justify-content: space-between;
+  background-color: #f9ecea;
+  color: #9e5952;
+  margin: 1em;
+  border-radius: 1rem;
+}
+
+/* Container for Map and Contact Details */
 .contact-container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  align-items: center; /* Aligns items vertically */
 }
 
-.contact-left, .contact-right {
-  width: 48%;
+.contact-left {
+  width: 60%; /* Adjust to make the map wider or narrower */
 }
 
-.about img{
-  width: 20em; /* Set the desired width */
-  height: 23em; /* Set the desired height */
-  object-fit: cover; /* Ensures the image maintains aspect ratio and fills the area */
+.contact-right {
+  width: 38%; /* Adjust to control the form width */
+  padding-left: 20px; /* Optional: adds space between map and form */
+}
+
+.about img {
+  width: 20em;
+  height: 23em;
+  object-fit: cover;
   border-radius: 8px;
-}
-
-/* Map */
-#map iframe {
-  width: 100%;
-  height: 32rem;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Form */
@@ -281,44 +305,68 @@ header {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .submit-button:hover {
   background-color: #f35525;
+  transform: scale(1.02);
 }
 
-/* Contact Details (Phone and Email) */
-.contact-details {
+/* Contact Details */
+ .contact-details {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact-details .contact-item:hover{
-  transform: scale(1.1);
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.map-contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem; /* Add space between map and contact details */
+}
+
+.contact-map {
+  flex: 1; /* Allow the map to take up remaining space */
+  width: 24rem;
+}
+
+.contact-item h6 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.contact-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-item:hover {
+  transform: scale(1.05);
+}
+
+.contact-details .contact-item:hover {
+  transform: scale(1.1);
 }
 
 .contact-item img {
   margin-right: 15px;
   width: 40px;
 }
-
-/* 
-.contact-item h6 {
-  font-size: 1rem;
-  color: #333;
-} */
 
 .contact-item h6 span {
   display: block;
@@ -328,7 +376,7 @@ header {
 
 footer {
   background-color: #FFF;
-  color: #fff;
+  color: #333;
   padding: 20px;
   display: flex;
   justify-content: space-between;
