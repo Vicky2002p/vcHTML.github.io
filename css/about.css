@@ -1,0 +1,52 @@
+/*About section*/
+.about-us-section {
+  padding: 40px;
+  text-align: center;
+}
+  
+.about-us-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+  
+.about-col{
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 1rem;
+  max-width: 100%; /* Adjust width to control alignment */
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.about-us-section p {
+  flex: 1;  /* Allows the text to take up the remaining space */
+}
+
+.about-carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.about-carousel-slide {
+  display: none; /* Hide all slides */
+  flex: 0 0 100%; /* Each slide should be as wide as the carousel container */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-carousel-slide img {
+  width: auto; /* Adjust based on your design needs */
+  max-width: 100%; /* Prevent image from overflowing */
+  height: 35rem;  /* Maintain aspect ratio */
+  max-height: 100%; /* Adjust based on your design needs */
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-carousel-slide img:hover{
+  transform: scale(1.05);
+}
+
+.about-carousel-slide.active {
+  display: block; /* Show active slide */
+}

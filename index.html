@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Jewellery</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/banner.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/diffScreen.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -15,15 +22,30 @@
     <header>
       <div class="header-top">
         <div class="contact-info">
-          <img src="icons/chat.svg" alt="chat Logo" />
-          <img src="icons/phone.svg" alt="call Logo" />
-          <img src="icons/mail.svg" alt="mail Logo" />
-          <img src="icons/location.svg" alt="location Logo" />
+          <!-- WhatsApp Chat Link (replace 'YOURNUMBER' with your actual number) -->
+          <a href="javascript:void(0);" onclick="openWhatsAppChat();">
+            <img src="icons/chat.svg" alt="chat Logo" />
+          </a>
+          <!-- Dynamically display phone number -->
+          <a href="javascript:void(0);" onclick="showPhoneNumber();">
+            <img src="icons/phone.svg" alt="call Logo" />
+          </a>
+          <!-- Mailto Link -->
+          <a href="mailto:sample@example.com">
+            <img src="icons/mail.svg" alt="mail Logo" />
+          </a>
+          <!-- Location Link -->
+          <a href="#contact">
+            <img src="icons/location.svg" alt="location Logo" />
+          </a>
+        </div>
+        <div id="phonePopover" class="phone-popover" style="display: none">
+          Call Us: <span>+91-1111111111</span>
         </div>
       </div>
       <div class="header-main">
         <div class="logo">
-          <img src="images/logo.svg" alt="Silver Hub Logo" />
+          <img src="icons/logo.svg" alt="Silver Hub Logo" />
         </div>
 
         <!-- Search bar form -->
@@ -46,113 +68,201 @@
       </div>
       <nav class="navbar">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SHOP FOR JEWELLERY</a></li>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">WHY US</a></li>
-          <li><a href="#">GALLERY</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#shop">SHOP FOR JEWELLERY</a></li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#whyus">WHY US</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Banner Section -->
-    <section class="banner">
-      <img src="images/img1.webp" alt="Jewellery Banner" />
+    <section class="hero-carousel-container">
+      <div class="hero-carousel">
+        <div class="hero-carousel-slide">
+          <img src="images/img1.webp" alt="Jewellery Banner" />
+          <div class="carousel-overlay">
+            <h1>Welcome to SilverHub</h1>
+            <!-- <button class="hero-button">Shop Now</button> -->
+          </div>
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="images/img10.webp" alt="Jewellery Banner" />
+          <!-- <div class="carousel-overlay">
+            <h1>Explore Our Latest Collection</h1>
+          </div> -->
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="images/img20.webp" alt="Jewellery Banner" />
+          <!-- <div class="carousel-overlay">
+            <h1>Exceptional Quality and Design</h1>
+          </div> -->
+        </div>
+      </div>
+      <button class="hero-carousel-prev">&#10094;</button>
+      <button class="hero-carousel-next">&#10095;</button>
     </section>
 
     <!-- Shop For Jewellery Section -->
-    <section class="shop-section">
+    <section class="shop-section" id="shop">
       <h2>... Shop For Jewellery ...</h2>
       <div class="shop-categories">
-        <div class="products">
-          <div class="product">
-            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+        <div class="shop-products">
+            <img src="images/myimg24.webp" alt="Gold Jewellery" onclick="openModal(this.src)"/>
             <div class="category">Gold Jewellery</div>
-            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+            <img src="images/myimg5.webp" alt="Silver Jewellery" onclick="openModal(this.src)"/>
             <div class="category">Silver Jewellery</div>
-            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+        </div>
+        <div class="shop-products">
+            <img src="images/myimg1.webp" alt="Diamond Jewellery" onclick="openModal(this.src)"/>
             <div class="category">Diamond Jewellery</div>
-            <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
-            <div class="category">Platinum Jewellery</div>
+            <img src="images/myimg14.jpg" alt="Gold Chain Necklace" onclick="openModal(this.src)"/>
+            <div class="category">Chains</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Products Section -->
-    <section class="products-section">
+    <section class="products-section" id="products">
       <h2>... Products ...</h2>
       <div class="products">
         <div class="product">
           <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
           <p>Gold Chain Necklace</p>
-          <p>₹83,000</p>
         </div>
         <div class="product">
-          <img src="images/myimg1.webp" alt="Ruby Earring" />
+          <img src="images/myimg8.webp" alt="Ruby Earring" />
           <p>Ruby Earring</p>
-          <p>₹25,700</p>
         </div>
         <div class="product">
-          <img src="images/myimg1.webp" alt="Chain" />
+          <img src="images/myimg16.webp" alt="Chain" />
           <p>Chain</p>
-          <p>₹36,700</p>
         </div>
         <div class="product">
-          <img src="images/myimg1.webp" alt="Gold Bangle" />
+          <img src="images/img36.webp" alt="Gold Bangle" />
           <p>Gold Bangle</p>
-          <p>₹56,000</p>
         </div>
       </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="about-us-section">
+    <section class="about-us-section" id="about">
       <h2>... About Us ...</h2>
-      <div class="about">
-        <img src="images/myimg53.jpg" alt="Gold Bangle" />
+      <div class="about-col">
+        <div class="about-carousel">
+              <div class="about-carousel-slide">
+              <img src="images/myimg53.jpg" alt="lady1">
+              </div>
+              <div class="about-carousel-slide">
+                <img src="images/myimg54.jpg" alt="lady2">
+              </div>
+              <div class="about-carousel-slide">
+                <img src="images/myimg53.jpg" alt="lady1">
+              </div>
+              <div class="about-carousel-slide">
+                  <img src="images/myimg54.jpg" alt="lady2">
+              </div>
+        </div>
+        <p>
+            We, Star Jewellery, situated at Malad West, Mumbai, Maharashtra, are one
+            of the leading exclusively designed jewellery showrooms...
+        </p>
       </div>
-      <p>
-        We, Star Jewellery, situated at Malad West, Mumbai, Maharashtra, are one
-        of the leading exclusively designed jewellery showrooms...
-      </p>
     </section>
 
     <!-- Why Us Section -->
-    <section class="why-us-section">
+    <section class="why-us-section" id="whyus">
       <h2>... Why Us ...</h2>
       <div class="why-us-icons">
-        <div class="icon">Great Collection</div>
-        <div class="icon">Reliable Products</div>
-        <div class="icon">100% Genuine</div>
+        <div class="icons">
+          <img src="icons/necklace.svg" alt="" />
+          <div class="icon">Great Collection</div>
+        </div>
+        <div class="icons">
+          <img src="icons/earrings.svg" alt="Ruby Earring" />
+          <div class="icon">Reliable Products</div>
+        </div>
+        <div class="icons">
+          <img src="icons/jewelry-shop.svg" alt="Ruby Earring" />
+          <div class="icon">100% Genuine</div>
+        </div>
       </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
+    <section class="gallery-section" id="gallery">
       <h2>... Gallery ...</h2>
       <div class="gallery">
-        <img src="images/img1.webp" alt="Gallery 1" />
-        <img src="images/img1.webp" alt="Gallery 2" />
-        <img src="images/img1.webp" alt="Gallery 3" />
-        <img src="images/img1.webp" alt="Gallery 4" />
+        <img
+          src="images/img1.webp"
+          alt="Gallery 1"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img2.webp"
+          alt="Gallery 2"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img3.webp"
+          alt="Gallery 3"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img4.webp"
+          alt="Gallery 4"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img5.webp"
+          alt="Gallery 5"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img6.webp"
+          alt="Gallery 6"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img7.webp"
+          alt="Gallery 7"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img8.webp"
+          alt="Gallery 8"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img9.webp"
+          alt="Gallery 9"
+          onclick="openModal(this.src)"
+        />
       </div>
     </section>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span id="closeModalButton" class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+    </div>
+
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <!-- <section class="testimonials-section">
       <h2>... Testimonials ...</h2>
       <p>
         Did my wedding jewellery shopping here. Great quality and the price was
         also reasonable.
       </p>
       <p>- Madhavi Shukla</p>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
-    <div class="contact-form-section">
+    <div class="contact-form-section" id="contact">
       <!-- Contact Form -->
       <div class="contact-form">
         <h2>... Contact Us ...</h2>
@@ -220,10 +330,12 @@
               Our Office Address<br /><span>area, city, landmark, pincode</span>
             </h6>
           </div>
-          <div class="contact-item">
-            <img src="icons/mail.svg" alt="Email Icon" />
-            <h6>General Enquiries<br /><span>sample@example.com</span></h6>
-          </div>
+          <a href="mailto:sample@example.com">
+            <div class="contact-item">
+              <img src="icons/mail.svg" alt="Email Icon" />
+              <h6>General Enquiries<br /><span>sample@example.com</span></h6>
+            </div>
+          </a>
           <div class="contact-item">
             <img src="icons/phone.svg" alt="Phone Icon" />
             <h6>Call Us<br /><span>+91-1111111111</span></h6>
@@ -246,7 +358,11 @@
       <div class="footer-right">
         <p>© 2024 SilverHub. All rights reserved.</p>
       </div>
+      <div class="footer-divider">
+        <hr class="f-divider" />
+      </div>
     </footer>
     <script src="js/script.js" defer></script>
+    <script src="./js/submitForm.js" defer></script>
   </body>
 </html>
