@@ -40,7 +40,7 @@
   .shop-products img {
     width: 70rem; /* Makes images responsive within their containers */
     max-width: 100%; /* Maximum width of the image */
-    height: 70rem;
+    height: 50rem;
     max-height: auto;
     margin-bottom: 0.5rem;
     border-radius: 1rem;

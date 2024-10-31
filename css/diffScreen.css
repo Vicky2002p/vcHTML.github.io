@@ -5,12 +5,14 @@
     .shop-products img {
         height: auto;
     }
+    
     .about-col{
       height: 35rem;
     }
 
     .about-carousel-slide img {
-        height: auto;  /* Maintain aspect ratio */
+        height: 35rem;  /* Maintain aspect ratio */
+        max-height: 100%; /* Prevent image from overflowing */
     }
 
     .navbar ul li {
