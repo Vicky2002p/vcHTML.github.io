@@ -221,26 +221,25 @@ header {
   margin-bottom: 1rem;
 }
 .gallery {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Adjust this as needed */
+  justify-content: space-around; /* Adjust this as needed */
   height: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  gap: 1.5rem
+  gap: 0rem
 }
 
 .gallery img {
-  width: auto;
-  max-width: 100%;
+  flex: 0 0 calc(33.33% - 1rem); /* Takes up one-third of the container minus gap */
   height: auto;
+  max-width: calc(33.33% - 1rem);
   border-radius: 1rem;
   transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 
 .dropdown-button {
