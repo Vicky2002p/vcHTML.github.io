@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Jewellery</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/banner.css" />
     <link rel="stylesheet" href="./css/shop.css" />
     <link rel="stylesheet" href="./css/product.css" />
@@ -47,27 +48,27 @@
         <div class="logo">
           <img src="icons/logo.svg" alt="Silver Hub Logo" />
         </div>
-
         <!-- Search bar form -->
         <form
-          action="https://www.google.com/search"
-          class="search"
-          id="search-bar"
+        action="https://www.google.com/search"
+        class="search"
+        id="search-bar"
         >
-          <input
-            type="search"
-            placeholder="Type something..."
-            name="q"
-            class="search__input"
-          />
-          <div class="search__button" id="search-button">
-            <i class="ri-search-2-line search__icon"></i>
-            <i class="ri-close-line search__close"></i>
-          </div>
-        </form>
-      </div>
+        <input
+        type="search"
+        placeholder="Type something..."
+        name="q"
+        class="search__input"
+        />
+        <div class="search__button" id="search-button">
+          <i class="ri-search-2-line search__icon"></i>
+          <i class="ri-close-line search__close"></i>
+        </div>
+      </form>
+      <i class="ri-menu-line hamburger"></i> <!-- Hamburger Icon from Remixicon -->
+      <div class="menu-container">
       <nav class="navbar">
-        <ul>
+        <ul class="navbar-links">
           <li><a href="#home">HOME</a></li>
           <li><a href="#shop">SHOP FOR JEWELLERY</a></li>
           <li><a href="#products">PRODUCTS</a></li>
@@ -76,27 +77,29 @@
           <li><a href="#gallery">GALLERY</a></li>
           <li><a href="#contact">CONTACT US</a></li>
         </ul>
-      </nav>
+        </nav>
+      </div>
+    </div>
     </header>
 
     <!-- Banner Section -->
     <section class="hero-carousel-container">
       <div class="hero-carousel">
         <div class="hero-carousel-slide">
-          <img src="images/img1.webp" alt="Jewellery Banner" />
+          <img src="images/img1.webp" alt="Jewellery Banner" loading="lazy"/>
           <div class="carousel-overlay">
             <h1>Welcome to SilverHub</h1>
             <!-- <button class="hero-button">Shop Now</button> -->
           </div>
         </div>
         <div class="hero-carousel-slide">
-          <img src="images/img10.webp" alt="Jewellery Banner" />
+          <img src="images/img10.webp" alt="Jewellery Banner" loading="lazy"/>
           <!-- <div class="carousel-overlay">
             <h1>Explore Our Latest Collection</h1>
           </div> -->
         </div>
         <div class="hero-carousel-slide">
-          <img src="images/img20.webp" alt="Jewellery Banner" />
+          <img src="images/img20.webp" alt="Jewellery Banner" loading="lazy"/>
           <!-- <div class="carousel-overlay">
             <h1>Exceptional Quality and Design</h1>
           </div> -->
@@ -111,15 +114,15 @@
       <h2>... Shop For Jewellery ...</h2>
       <div class="shop-categories">
         <div class="shop-products">
-            <img src="images/myimg24.webp" alt="Gold Jewellery" onclick="openModal(this.src)"/>
+            <img src="images/myimg24.webp" alt="Gold Jewellery" loading="lazy" onclick="openModal(this.src)"/>
             <div class="category">Gold Jewellery</div>
-            <img src="images/myimg5.webp" alt="Silver Jewellery" onclick="openModal(this.src)"/>
+            <img src="images/myimg5.webp" alt="Silver Jewellery" loading="lazy" onclick="openModal(this.src)"/>
             <div class="category">Silver Jewellery</div>
         </div>
         <div class="shop-products">
-            <img src="images/myimg1.webp" alt="Diamond Jewellery" onclick="openModal(this.src)"/>
+            <img src="images/myimg1.webp" alt="Diamond Jewellery" loading="lazy" onclick="openModal(this.src)"/>
             <div class="category">Diamond Jewellery</div>
-            <img src="images/myimg14.jpg" alt="Gold Chain Necklace" onclick="openModal(this.src)"/>
+            <img src="images/myimg14.jpg" alt="Gold Chain Necklace" loading="lazy" onclick="openModal(this.src)"/>
             <div class="category">Chains</div>
           </div>
         </div>
@@ -131,19 +134,19 @@
       <h2>... Products ...</h2>
       <div class="products">
         <div class="product">
-          <img src="images/myimg1.webp" alt="Gold Chain Necklace" />
+          <img src="images/myimg1.webp" alt="Gold Chain Necklace" loading="lazy" />
           <p>Gold Chain Necklace</p>
         </div>
         <div class="product">
-          <img src="images/myimg8.webp" alt="Ruby Earring" />
+          <img src="images/myimg8.webp" alt="Ruby Earring" loading="lazy" />
           <p>Ruby Earring</p>
         </div>
         <div class="product">
-          <img src="images/myimg16.webp" alt="Chain" />
+          <img src="images/myimg16.webp" alt="Chain" loading="lazy" />
           <p>Chain</p>
         </div>
         <div class="product">
-          <img src="images/img36.webp" alt="Gold Bangle" />
+          <img src="images/img36.webp" alt="Gold Bangle" loading="lazy" />
           <p>Gold Bangle</p>
         </div>
       </div>
@@ -155,16 +158,22 @@
       <div class="about-col">
         <div class="about-carousel">
               <div class="about-carousel-slide">
-              <img src="images/myimg53.jpg" alt="lady1">
+              <img src="images/myimg52.jpg" alt="lady1" loading="lazy">
               </div>
               <div class="about-carousel-slide">
-                <img src="images/myimg54.jpg" alt="lady2">
+                <img src="images/myimg53.jpg" alt="lady2" loading="lazy">
               </div>
               <div class="about-carousel-slide">
-                <img src="images/myimg53.jpg" alt="lady1">
+                <img src="images/myimg54.jpg" alt="lady3" loading="lazy">
               </div>
               <div class="about-carousel-slide">
-                  <img src="images/myimg54.jpg" alt="lady2">
+                  <img src="images/myimg55.jpg" alt="lady4" loading="lazy">
+              </div>
+              <div class="about-carousel-slide">
+                <img src="images/myimg58.jpg" alt="lady5" loading="lazy">
+              </div>
+              <div class="about-carousel-slide">
+                  <img src="images/myimg61.jpg" alt="lady6" loading="lazy">
               </div>
         </div>
         <p>
@@ -200,48 +209,115 @@
         <img
           src="images/img1.webp"
           alt="Gallery 1"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img2.webp"
           alt="Gallery 2"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img3.webp"
           alt="Gallery 3"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img4.webp"
           alt="Gallery 4"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img5.webp"
           alt="Gallery 5"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img6.webp"
           alt="Gallery 6"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img7.webp"
           alt="Gallery 7"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img8.webp"
           alt="Gallery 8"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
         <img
           src="images/img9.webp"
           alt="Gallery 9"
+          loading="lazy"
           onclick="openModal(this.src)"
         />
+        <img
+          src="images/img10.webp"
+          alt="Gallery 10"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img11.webp"
+          alt="Gallery 11"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img12.webp"
+          alt="Gallery 12"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img13.webp"
+          alt="Gallery 13"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img14.webp"
+          alt="Gallery 14"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img15.webp"
+          alt="Gallery 15"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img16.webp"
+          alt="Gallery 16"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img17.webp"
+          alt="Gallery 17"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <img
+          src="images/img18.webp"
+          alt="Gallery 18"
+          loading="lazy"
+          onclick="openModal(this.src)"
+        />
+        <div class="hidden-images" id="hiddenImages">
+        </div>
+        <!-- Dropdown button -->
+        <button onclick="toggleImages()" class="dropdown-button">Show More</button>
       </div>
     </section>
 

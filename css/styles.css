@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+*{
+  border-color: red;
+}
+
 * {
   font-family: 'CustomFont', Arial, sans-serif;
   margin: 0;
@@ -37,8 +41,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #261f29;
-  background-color: #ffe678;
+  color: #ffffb3;
+  background-color: #dcab6b;
 }
 
 .contact-info {
@@ -125,12 +129,12 @@ header {
 .search__button {
   width: 56px;
   height: 56px;
-  color: #000;
-  background-color: #000;
+  color: #fff;
+  background-color: #dcab6b;
   border-radius: 50%;
   position: absolute;
   top: 0;
-  bottom: 15%;
+  bottom: 3%;
   right: 10px;
   margin: auto;
   display: grid;
@@ -176,39 +180,6 @@ header {
   opacity: 1;
 }
 
-.navbar {
-  background-color: #FFF;
-  color: #e8edf8;
-  padding: 1rem;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background-color: #FFF;
-}
-
-.navbar ul li {
-  font-size: 1.4rem;
-  display: inline;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  background-color: #FFF;
-  color: #000;
-  padding: 1em;
-  transition: all 0.15s;
-}
-
-.navbar ul li a:hover {
-  background-color: #e8edf8;
-  color: #5e6684;
-  border-radius: 20px;
-}
-
 .banner {
   position: relative;
   text-align: center;
@@ -218,7 +189,7 @@ header {
   width: 100%;
 }
 
-.why-us-section, .testimonials-section, .contact-section, .contact-form-section, .map-section {
+.why-us-section, .testimonials-section, .contact-form-section, .map-section {
   padding: 40px;
   text-align: center;
 }
@@ -229,7 +200,7 @@ header {
   margin-bottom: 1rem;
 }
 
-.why-us-icons, .gallery {
+.why-us-icons{
   display: flex;
   margin: 1rem;
   justify-content: space-around;
@@ -237,7 +208,11 @@ header {
   flex-wrap: wrap;
 }
 
-.category, .icon, .gallery img {
+.category, .icon {
+  flex: 1;
+}
+
+.gallery img{
   flex: 1;
 }
 
@@ -246,13 +221,19 @@ header {
   margin-bottom: 1rem;
 }
 .gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Adjust this as needed */
+  height: auto;
   padding-left: 1rem;
   padding-right: 1rem;
   gap: 1.5rem
 }
 
 .gallery img {
-  width: 8rem;
+  width: auto;
+  max-width: 100%;
   height: auto;
   border-radius: 1rem;
   transition: transform 0.3s ease;
@@ -260,6 +241,36 @@ header {
 
 .gallery img:hover {
   transform: scale(1.1);
+}
+
+.dropdown-button {
+  position: relative;
+  bottom: 1rem;
+  margin: 1rem;
+  padding: 1em 1em;
+  background-color: #774e24;
+  color: white;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-button:hover{
+  transform: scale(1.05);
+}
+
+.hidden-images {
+  display: none;
+  transition: opacity 0.3s ease, visibility 0s 0.5s, max-height 0.5s ease;
+  opacity: 0;
+}
+
+.hidden-images.show {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px; /* Adjust max-height to fit content */
+  transition: opacity 0.5s ease, visibility 0s, max-height 0.5s ease;
 }
 
 /* Adjustments to the "Why Us" section for image sizes */
@@ -278,6 +289,10 @@ header {
   transform: scale(1.1);
 }
 
+.contact-section{
+  text-align: center;
+  padding: 0rem;
+}
 
 /* Map Section */
 .map-section {
@@ -294,11 +309,13 @@ header {
 /* Increasing the width of the map */
 .map-contact-container .contact-map iframe {
   max-width: 100%; /* Full width of its parent container */
-  width: 87rem;
+  width: 100%;
   height: 33rem; /* Increasing height for better visibility */
 }
 
 .map-contact-container {
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row; /* Ensures side-by-side layout */
   justify-content: space-between;
@@ -309,7 +326,7 @@ header {
 
 .contact-map {
   flex: 3; /* Allows the map to grow and take 3 times the space of contact details if space allows */
-  min-width: 300px; /* Sets a minimum width for the map */
+  min-width: 50%; /* Sets a minimum width for the map */
 }
 
 /* Contact Section Styles */
@@ -319,15 +336,16 @@ header {
   align-items: flex-start;
   padding: 20px;
   /* background-color: #f9ecea; */
-  color: #9e5952;
+  color: #774e24;
 }
 
 .contact-form-section {
   justify-content: space-between;
-  background-color: #f9ecea;
-  color: #9e5952;
+  background-color: #dcab6b;
+  color: #774e24;
   align-items: center;
-  max-width: 60%;
+  width: 60%;
+  max-width: 100%;
   margin: 1em auto;
   border-radius: 1rem;
 }
@@ -345,8 +363,7 @@ header {
 }
 
 .contact-right {
-  width: 38%; /* Adjust to control the form width */
-  padding-left: 20px; /* Optional: adds space between map and form */
+  width: auto; /* Adjust to control the form width */
 }
 
 /* Contact Form */
@@ -382,10 +399,11 @@ header {
 }
 
 .submit-button {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   padding: 12px;
-  background-color: #9e5952;
-  color: white;
+  background-color: #6a381f;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -394,22 +412,26 @@ header {
 }
 
 .submit-button:hover {
-  background-color: #f35525;
-  transform: scale(1.02);
+  background-color: #6e0d25;
+  color: #ffffb3;
+  transform: scale(1.1);
 }
 
 /* Contact Details */
  .contact-details {
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  gap: 2rem;
-}
-
-.contact-item {
+   display: flex;
+   flex-direction: column; /* Stack buttons vertically */
+   gap: 2rem;
+   width: auto;
+   max-width: 100%;
+  }
+  
+  .contact-item {
   display: flex;
   align-items: center; /* Center align items vertically */
   padding: 1.7rem;
-  width: 25rem;
+  width: auto;
+  max-width: 100%;
   max-height: 10rem;
   background-color: white;
   border-radius: 1rem;
@@ -466,11 +488,10 @@ footer {
 }
 
 .footer-divider .f-divider {
-  height: 0.2rem;
-  border-color: #ffee58;
+  height: 0.3rem;
+  border-color: #dcab6b;
   border-radius: 1rem;
-  background-color: #ffee58;
-  width: 87rem;
+  width: 60%;
   max-width: 100%;
   margin: 1rem 0;
 }

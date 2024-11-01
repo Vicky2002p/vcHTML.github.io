@@ -41,7 +41,7 @@
     width: 70rem; /* Makes images responsive within their containers */
     max-width: 100%; /* Maximum width of the image */
     height: 50rem;
-    max-height: auto;
+    max-height: 100%;
     margin-bottom: 0.5rem;
     border-radius: 1rem;
     transition: transform 0.3s ease-in-out;

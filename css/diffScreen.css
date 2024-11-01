@@ -1,148 +1,180 @@
 /* Additional adjustments to ensure responsiveness */
 
-  @media (min-width: 800px) {
+@media (min-width: 300px){
 
-    .shop-products img {
-        height: auto;
-    }
-    
-    .about-col{
-      height: 35rem;
-    }
-
-    .about-carousel-slide img {
-        height: 35rem;  /* Maintain aspect ratio */
-        max-height: 100%; /* Prevent image from overflowing */
-    }
-
-    .navbar ul li {
-        font-size: 1rem;
-        display: inline;
-    }
-
-    .contact-item{
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .navbar {
-      font-size: 1rem;
-    }
-
-    .navbar ul {
-        gap: 0rem;
-    }
-
-    .footer-divider .f-divider {
-      height: 0.2rem;
-      border-color: #ffee58;
-      border-radius: 1rem;
-      background-color: #ffee58;
-      width: 56rem;
-      max-width: 100%;
-      margin: 1rem 0;
-    }
+  .header-top {
+    padding: 0;
+  }
+  .shop-section h2 {
+    font-size: 1.5rem;
   }
 
-  @media (max-width: 1024px) {
+  .shop-products img {
+    height: auto;
+  }
 
-    .gallery img {
-      flex: 1 1 33.33%; /* 3 images per row */
-      max-width: 31%; /* Adjusting max-width accordingly */
-    }
+  .products {
+    margin: 0;
+    height: auto;
+    width: auto;
+  }
+
+  .products img {
+    height: 100%;
+    max-width: 100%;
   }
   
-  @media (max-width: 768px) {
+  .contact-form-section {
+    width: 87%;
+    max-width: 100%;
+  }
 
-    .carousel-overlay h1 {
-        font-size: 2em; /* Smaller font size for smaller devices */
-    }
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images along the main axis */
+    height: 100%;
+    padding: 0;
+    gap: 0.5rem;
+    max-width: 100%;
 
-    .navbar ul li {
-        font-size: 1rem;
-        display: inline;
-    }
+  }
+  .gallery img {
+    flex: 1 1 50%;
+    border-color: #ffef61;
+    max-width: 100%;
+    width: auto; /* Adjusting max-width to almost full width */
+  }
 
-    .shop-product {
-        flex: 1 1 100%; /* Each product takes full width on smaller screens */
-      }
+  .contact-right {
+    padding-left: 0em;
+  }
 
-    .shop-categories {
-        grid-template-columns: 1fr; /* Stack products in a single column on small screens */
-      }
-    
-      .product img {
-        width: 80px; /* Smaller images on mobile */
-      }
-    
-    .navbar ul {
-        flex-direction: column;
-        padding: 0;
-    }
+  .contact-details{
+    width: 80%;
+  }
 
-    .navbar ul li a {
-        text-align: center;
-        padding: 10px;
-        width: 100%;
-    }
+  .map-contact-container{
+    margin: 0rem;
+    /* border-color: #ffee58; */
+    width: 100%;  /* Adjust to the desired width */
+    height: auto;
+  }
 
-    .product {
-        flex-basis: 100%;
-    }
+  .footer-divider .f-divider {
+    width: auto;
+    max-width: 100%;
+  }
+}
 
-    .contact-item{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .why-us-section .why-us-icons {
-        justify-content: space-between; /* Adjusts spacing for smaller screens */
-    }
-    
-      .why-us-section .icons {
-        flex-basis: 100%; /* Each icon takes the full width of the container on small screens */
-        margin-bottom: 20px; /* Adds more space between stacked items */
-      }
-    
-      .footer-divider .f-divider {
-        height: 0.2rem;
-        border-color: #ffee58;
-        border-radius: 1rem;
-        background-color: #ffee58;
-        width: 56rem;
-        max-width: 100%;
-        margin: 1rem 0;
-      }
-      
-      .map-contact-container {
-        flex-direction: column; /* Stacks map and contact details vertically on smaller screens */
-      }
-    
-      .contact-map,
-      .contact-details {
-        min-width: 100%; /* Takes full width on small screens */
-        max-width: 100%; /* Prevents overflow */
-      }
-    
-      .navbar {
-        font-size: 0.8rem;
-        padding: 0.6rem;
-      }
-      .navbar ul {
-        font-size: 0.6em;
-        gap: 0rem;
-      }
+@media (max-width: 768px) {
+  .submit-button {
+    width: 10rem;
+  }
 
-    .gallery img {
-      flex: 1 1 50%; /* 2 images per row */
-      max-width: 48%; /* Adjusting max-width accordingly */
-    }
+  .carousel-overlay h1 {
+    font-size: 2em; /* Smaller font size for smaller devices */
+  }
+
+  .shop-product {
+    flex: 1 1 100%; /* Each product takes full width on smaller screens */
+  }
+
+  .shop-categories {
+    grid-template-columns: 1fr; /* Stack products in a single column on small screens */
+  }
+
+  .contact-right {
+    padding-left: 0em;
+  }
+
+
+  .product {
+    flex-basis: 100%;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
   }
   
-  @media (max-width: 480px) {
-    .gallery img {
-      flex: 1 1 100%; /* 1 image per row */
-      max-width: 98%; /* Adjusting max-width to almost full width */
-    }
+  .why-us-section .why-us-icons {
+    justify-content: space-between; /* Adjusts spacing for smaller screens */
   }
   
+  .why-us-section .icons {
+    flex-basis: 100%; /* Each icon takes the full width of the container on small screens */
+    margin-bottom: 20px; /* Adds more space between stacked items */
+  }
+  
+  .footer-divider .f-divider {
+    height: 0.2rem;
+    border-color: #ffee58;
+    border-radius: 1rem;
+    background-color: #ffee58;
+    width: 56rem;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .map-contact-container {
+    flex-direction: column; /* Stacks map and contact details vertically on smaller screens */
+  }
+
+  .contact-map{
+    min-width: 100%; /* Takes full width on small screens */
+    max-width: 100%; /* Prevents overflow */
+  }
+  .contact-details {
+    width: 100%; 
+    max-width: 100%; /* Prevents overflow */
+  }
+
+  .gallery img {
+    flex: 1 1 100%; /* 2 images per row */
+    max-width: 100%; /* Adjusting max-width accordingly */
+  }
+
+  .footer-divider .f-divider {
+    width: 60%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  
+  .shop-products img {
+    height: auto;
+  }
+
+  .about-col {
+    height: 35rem;
+  }
+
+  .about-carousel-slide img {
+    height: 35rem;  /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent image from overflowing */
+  }
+
+  .contact-item {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-divider .f-divider {
+    height: 0.2rem;
+    border-radius: 1rem;
+    background-color: #dcab6b;
+    height: 0.3rem;
+    width: 56rem;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery img {
+    flex: 1 1 33.33%; /* 3 images per row */
+    max-width: 31%; /* Adjusting max-width accordingly */
+  }
+}
