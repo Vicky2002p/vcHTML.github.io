@@ -1,3 +1,88 @@
+function searchWebsite() {
+  const input = document.getElementById('search-input');
+  if (!input.value.trim()) {
+    // If no search term, just toggle the visibility of the search bar
+    searchBar.classList.toggle("show-search");
+    return; // Exit the function early
+  }
+
+  const searchTerm = input.value.toLowerCase();
+  const sections = document.querySelectorAll('section');
+
+  let found = false;
+  for (const section of sections) {
+    if (section.id.toLowerCase().includes(searchTerm) || section.textContent.toLowerCase().includes(searchTerm)) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) alert('No matching section found on the page.');
+
+  // Clear the input after search
+  input.value = '';
+}
+
+document.getElementById('search-button').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent any default form submission
+  searchWebsite();
+});
+
+
+document.getElementById('search-input').addEventListener('input', function() {
+  const input = this.value.toLowerCase();
+  const suggestions = document.getElementById('suggestions');
+  suggestions.innerHTML = ''; // Clear previous suggestions
+  if (!input) {
+    suggestions.style.display = 'none';
+    return;
+  }
+
+  let suggestionsHtml = '';
+  const sections = document.querySelectorAll('section h2, section h1'); // Assuming titles are in h2 or h1 tags
+
+  sections.forEach(section => {
+    const text = section.textContent;
+    if (text.toLowerCase().includes(input)) {
+      suggestionsHtml += `<a href="#${section.parentElement.id}" onclick="selectSuggestion(event)">${text}</a>`;
+    }
+  });
+
+  if (suggestionsHtml) {
+    suggestions.innerHTML = suggestionsHtml;
+    suggestions.style.display = 'block';
+  } else {
+    suggestions.style.display = 'none';
+  }
+});
+
+function selectSuggestion(event) {
+  const targetId = event.target.getAttribute('href');
+  document.querySelector(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.getElementById('suggestions').style.display = 'none'; // Hide suggestions
+  document.getElementById('search-input').value = ''; // Clear input
+  event.preventDefault(); // Prevent default anchor behavior
+}
+
+function openWhatsAppChat() {
+  var whatsappUrl = "https://api.whatsapp.com/send?phone=+918780691141";
+  window.open(whatsappUrl, '_blank');
+}
+
+function showPhoneNumber() {
+    var phonePopover = document.getElementById('phonePopover');
+    if (phonePopover.style.display === 'none' || !phonePopover.style.display) {
+        phonePopover.style.display = 'block';
+        phonePopover.style.opacity = '1';
+        phonePopover.style.visibility = 'visible';
+    } else {
+        phonePopover.style.display = 'none';
+        phonePopover.style.opacity = '0';
+        phonePopover.style.visibility = 'hidden';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const gallery = document.getElementById('hiddenImages');

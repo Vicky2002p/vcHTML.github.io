@@ -1,15 +1,30 @@
 <?php
-// Assuming content-type is set to application/json
-$data = json_decode(file_get_contents("php://input"), true);
+header('Content-Type: application/json');
 
-// You can then access your data like this
-$name = $data['name'];
-$mobile = $data['mobile'];
-$email = $data['email'];
-$message = $data['message'];
+// Read JSON input
+$inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, true);
 
-// Process the data, store it in a database, send email, etc.
+$name = $input['name'] ?? '';
+$mobile = $input['mobile'] ?? '';
+$email = $input['email'] ?? '';
+$message = $input['message'] ?? '';
 
-// Return a response
-echo json_encode(["status" => "success", "message" => "Form submitted successfully!"]);
+// Validate input
+if (empty($name) || empty($mobile) || empty($email) || empty($message)) {
+    echo json_encode(['status' => 'error', 'message' => 'Please fill in all fields.']);
+    exit;
+}
+
+$to = 'makingalotmoney6@gmail.com'; // Your email address
+$subject = 'New Contact Form Submission';
+$body = "Name: $name\nMobile: $mobile\nEmail: $email\nMessage: $message";
+$headers = "From: noreply@yourdomain.com\r\n"; // Suggested to use a domain-specific email address
+$headers .= "Reply-To: $email\r\n";
+
+if (mail($to, $subject, $body, $headers)) {
+    echo json_encode(['status' => 'success', 'message' => 'Email sent successfully.']);
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Email sending failed.']);
+}
 ?>

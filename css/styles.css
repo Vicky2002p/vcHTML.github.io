@@ -63,8 +63,8 @@ header {
 
 .phone-popover {
   position: absolute;
-  top: 6%; /* Position according to your layout */
-  transform: translateX(-78%);
+  top: 5%;
+  transform: translateX(-30%);
   background-color: #fff;
   color: #333;
   padding: 10px 20px;
@@ -178,6 +178,32 @@ header {
 
 .show-search .search__close {
   opacity: 1;
+}
+
+.suggestions {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 1000; /* Ensure it's above other content */
+  display: none; /* Hide by default */
+}
+
+.suggestions a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #ccc;
+}
+
+.suggestions a:last-child {
+  border-bottom: none;
+}
+
+.suggestions a:hover {
+  background-color: #f8f8f8;
 }
 
 .banner {

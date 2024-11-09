@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Jewellery</title>
+    <title>Silver Hub</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/banner.css" />
@@ -41,7 +41,7 @@
           </a>
         </div>
         <div id="phonePopover" class="phone-popover" style="display: none">
-          Call Us: <span>+91-1111111111</span>
+          Call Us: <span>+91-8780691141</span>
         </div>
       </div>
       <div class="header-main">
@@ -50,7 +50,7 @@
         </div>
         <!-- Search bar form -->
         <form
-        action="https://www.google.com/search"
+        onsubmit="event.preventDefault(); searchWebsite();"
         class="search"
         id="search-bar"
         >
@@ -58,9 +58,11 @@
         type="search"
         placeholder="Type something..."
         name="q"
+        id="search-input"
         class="search__input"
         />
-        <div class="search__button" id="search-button">
+        <div id="suggestions" class="suggestions"></div> <!-- Container for suggestions -->
+        <div class="search__button" id="search-button" onclick="event.preventDefault(); searchWebsite(); event.stopPropagation();">
           <i class="ri-search-2-line search__icon"></i>
           <i class="ri-close-line search__close"></i>
         </div>
@@ -88,7 +90,7 @@
         <div class="hero-carousel-slide">
           <img src="images/img1.webp" alt="Jewellery Banner" loading="lazy"/>
           <div class="carousel-overlay">
-            <h1>Welcome to SilverHub</h1>
+            <h1>Welcome to SilverHub & Krunal Gems</h1>
             <!-- <button class="hero-button">Shop Now</button> -->
           </div>
         </div>
@@ -403,18 +405,18 @@
           <div class="contact-item">
             <img src="icons/location.svg" alt="Location Icon" />
             <h6>
-              Our Office Address<br /><span>area, city, landmark, pincode</span>
+              Our Office Address<br /><span>GF 09, Shilp Satved, B/S Sindhu Bhavan, Sindhu Bhavan Rd., Bodakdev, Ahmedabad 380054</span>
             </h6>
           </div>
           <a href="mailto:sample@example.com">
             <div class="contact-item">
               <img src="icons/mail.svg" alt="Email Icon" />
-              <h6>General Enquiries<br /><span>sample@example.com</span></h6>
+              <h6>General Enquiries<br /><span>silverhub3023@gmail.com</span></h6>
             </div>
           </a>
           <div class="contact-item">
             <img src="icons/phone.svg" alt="Phone Icon" />
-            <h6>Call Us<br /><span>+91-1111111111</span></h6>
+            <h6>Call Us<br /><span>+91-7949167587</span></h6>
           </div>
           <div class="contact-item">
             <img src="icons/clock.svg" alt="Timing Icon" />
@@ -439,6 +441,6 @@
       </div>
     </footer>
     <script src="js/script.js" defer></script>
-    <script src="./js/submitForm.js" defer></script>
+    <script src="js/submitForm.js" defer></script>
   </body>
 </html>
