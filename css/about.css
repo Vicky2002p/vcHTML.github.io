@@ -29,6 +29,7 @@
 
 .about-carousel {
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -47,7 +48,7 @@
 }
 
 .about-carousel-slide img {
-  width: auto; /* Adjust based on your design needs */
+  width: 55%; /* Adjust based on your design needs */
   height: auto;
   max-width: 100%; /* Prevent image from overflowing */
   max-height: 100%; /* Adjust based on your design needs */

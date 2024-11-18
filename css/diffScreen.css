@@ -3,27 +3,7 @@
 @media (min-width: 300px){
 
   .carousel-overlay h1 {
-    font-size: 0.5em;
-  }
-
-  .search__input{
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: 0.7em;
-    width: 100rem;
-  }
-  
-  .search__button{
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-  
-  .search__icon, .search__close {
-    font-size: 1rem;
-  }
-
-  .show-search {
-    margin: 1rem;
+    font-size: 1em;
   }
 
   .header-top {
@@ -99,6 +79,18 @@
   }
 }
 
+@media (max-width: 740px) {
+
+  .about-carousel-slide img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-carousel p{
+    padding-left: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .gallery img {
     flex: 0 0 calc(33.33% - 1rem); /* Reaffirm three images per row for screens wider than 768px */
@@ -107,6 +99,26 @@
 }
 
 @media (max-width: 768px) {
+
+  .search__input{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 0.7em;
+    width: 100rem;
+  }
+  
+  .search__button{
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  
+  .search__icon, .search__close {
+    font-size: 1rem;
+  }
+
+  .show-search {
+    margin: 1rem;
+  }
 
   .about-col p{
     padding: 1rem;
@@ -119,10 +131,6 @@
 
   .submit-button {
     width: 10rem;
-  }
-
-  .carousel-overlay h1 {
-    font-size: 1.2em; /* Smaller font size for smaller devices */
   }
 
   .products-section .product img{
@@ -208,6 +216,10 @@
 
 @media (min-width: 800px) {
   
+  .carousel-overlay h1 {
+    font-size: 2rem;
+  }
+
   .shop-products img {
     height: auto;
   }
@@ -237,6 +249,10 @@
 }
 
 @media (min-width: 1024px) {
+  .carousel-overlay h1 {
+    font-size: 3rem;
+  }
+
   .gallery img {
     flex: 0 0 calc(33.33% - 1rem); /* Reasserting dimensions for larger screens */
     max-width: calc(33.33% - 1rem);
