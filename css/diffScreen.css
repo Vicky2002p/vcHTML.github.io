@@ -2,6 +2,30 @@
 
 @media (min-width: 300px){
 
+  .carousel-overlay h1 {
+    font-size: 0.5em;
+  }
+
+  .search__input{
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 0.7em;
+    width: 100rem;
+  }
+  
+  .search__button{
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  
+  .search__icon, .search__close {
+    font-size: 1rem;
+  }
+
+  .show-search {
+    margin: 1rem;
+  }
+
   .header-top {
     padding: 0;
   }
@@ -83,6 +107,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .about-col p{
+    padding: 1rem;
+  }
+
   .gallery img {
     flex: 0 0 calc(50% - 1rem); /* Two images per row for mobile screens */
     max-width: calc(50% - 1rem);
@@ -93,7 +122,11 @@
   }
 
   .carousel-overlay h1 {
-    font-size: 2em; /* Smaller font size for smaller devices */
+    font-size: 1.2em; /* Smaller font size for smaller devices */
+  }
+
+  .products-section .product img{
+    flex: 1 1 100%;
   }
 
   .shop-product {
@@ -108,7 +141,6 @@
     padding-left: 0em;
   }
 
-
   .product {
     flex-basis: 100%;
   }
@@ -118,6 +150,19 @@
     align-items: center;
   }
   
+  .about-carousel{
+    min-width: 8rem;
+  }
+
+  .about-carousel-slide img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .about-carousel p{
+    padding-left: 1rem;
+  }
+
   .why-us-section .why-us-icons {
     justify-content: space-between; /* Adjusts spacing for smaller screens */
   }
@@ -172,7 +217,6 @@
   }
 
   .about-carousel-slide img {
-    height: 35rem;  /* Maintain aspect ratio */
     max-height: 100%; /* Prevent image from overflowing */
   }
 
